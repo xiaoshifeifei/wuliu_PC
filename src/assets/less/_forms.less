@@ -1,0 +1,57 @@
+.has-error .ant-form-explain {
+  vertical-align: middle;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  margin-left: 7px;
+  width: 100px;
+  margin-top:3px;
+  padding: 10px;
+  border-radius: 5px;
+  background: #fc6a08;
+  color: #fff;
+  z-index: 2;
+  line-height: 14px;
+  opacity: 1;
+  animation: hideerror 1s linear 0.8s forwards;
+  &::before {
+    content: '';
+    position: absolute;
+    right: 100%;
+    display: block;
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+    border-right-color: #fc6a08;
+  }
+}
+
+
+
+.ant-form-item-control-wrapper {
+  &:hover {
+    .ant-form-explain {
+      opacity: 1;
+      animation: none;
+    }
+  }
+}
+
+
+@keyframes hideerror {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes showError {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
